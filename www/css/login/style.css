@@ -1,0 +1,44 @@
+body{
+ background-color: #364150;
+}
+
+#login-section {
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.vertical-offset-100{
+  padding-top:10px;
+}
+.appname {
+  color: #eceef1;
+  font-weight: 200;
+  letter-spacing: 3px;
+  font-size: 30px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.login-panel > .login-heading {
+  color: #45b6af;
+  background-color: #eceef1;
+  border: none !important;
+}
+.login-panel {
+  background: #eceef1;
+}
+.login-title {
+  padding: 10px;
+  font-size: 20px;
+}
+.btn-success {
+  background: #45b6af;
+  border-color: #45b6af;
+}
+.btn-success:hover,
+.btn-success:focus {
+  background: #2a817c;
+  border-color: #2a817c;
+}
+.footer-p {
+  color: #d0d2d4;
+}

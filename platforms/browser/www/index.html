@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>ExamZee</title>
+    <!-- css customized -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/login/style.css" />
+
+    <!-- js customized -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="row vertical-offset-100" id="login-section">
+        <div class="row">
+          <div class="appname text-center col-md-12">
+            ExamZee
+            <ul class="list" id="listview">
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-md-offset-4">
+
+          <!-- Login Form -->
+          <div class="panel panel-default login-panel">
+  			    <div class="panel-heading login-heading">
+  			    	<h3 class="panel-title text-center login-title">Log in</h3>
+  			 	  </div>
+            <div class="panel-body">
+
+              <div class="alert alert-danger hidden" id="error-msg">
+                <strong>Error!</strong> Incorrect password.
+              </div>
+
+              <form action="" method="post">
+                <div class="form-group">
+                  <input type="text" name="username" class="input form-control" autocomplete="off" id="username" placeholder="Username"/>
+                </div>
+                <div class="form-group">
+                  <input type="password" name="password" class="input form-control" autocomplete="off" id="password" placeholder="Password"/>
+                </div>
+                <input type="submit" class="btn btn-lg btn-success btn-block login" name="login" value="LOGIN" id="login"/>
+              </form>
+
+            </div>
+    			</div>
+          <!-- Login Form -->
+          <p class="footer-p text-center">Copyright © 2017 </p>
+    		</div>
+    	</div>
+    </div>
+
+    <script type="text/javascript" src="js/login/index.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+  </body>
+</html>
