@@ -14,7 +14,7 @@ $(document).ready(function() {
         var score = grade.score
 
         if (grade.status == 3) {
-          $('.table-grades > tbody').append( "<tr><td>" + exam_name + "</td><td>NA</td><td><button class='btn btn-xs btn-warning' onClick='checkExam();'>process</button></td></tr>" );
+          $('.table-grades > tbody').append( "<tr><td>" + exam_name + "</td><td>NA</td><td><button type='button' onclick='checkExam(this)' class='btn btn-xs btn-warning' id=" + grade.id + ">process</button></td></tr>" );
         } else {
           $('.table-grades > tbody').append( "<tr><td>" + exam_name + "</td><td>" + score + "</td><td>" + status + "</td></tr>" );
         }
@@ -22,3 +22,18 @@ $(document).ready(function() {
   });
 
 });
+
+function checkExam(elem){
+  var elem = elem.id;
+  var url = 'https://examzee-api.herokuapp.com/api/v1/student_grades/'+ elem;
+  $.ajax({
+    type: "PUT",
+    url: url,
+    crossDomain: true,
+    cache: false,
+    success: function() {
+      alert("Successfully Checked!");
+      window.location.href = "../students/student.html?id=" + student_number + "&full_name=" + name + "";
+    }
+  });
+};
