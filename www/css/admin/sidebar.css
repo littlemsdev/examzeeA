@@ -20,7 +20,7 @@
   margin-left: -250px;
   width: 0;
   height: 100%;
-  background: #000;
+  background: #1c222a;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -67,6 +67,16 @@
   background: rgba(255, 255, 255, 0.2);
   color: #fff;
   text-decoration: none;
+}
+.sidebar-nav li a {
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+.sidebar-nav li.active {
+  background: #45b6af;
+}
+.sidebar-nav li.active a {
+  color: #fff;
 }
 
 .sidebar-nav li a:active,

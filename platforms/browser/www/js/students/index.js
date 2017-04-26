@@ -1,5 +1,7 @@
 $(document).ready(function() {
-  var url = "http://192.168.250.22:8888/examzee/json.php";
+  // var url = "http://192.168.250.47:8888/examzee/json.php";
+  // var url = "http://192.168.250.47:8888/examzee/json.php";
+  var url = "http://192.168.1.7:8888/examzee/json.php";
   $.getJSON(url, function(result) {
     console.log(result);
     $.each(result, function(i, field) {
