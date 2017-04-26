@@ -13,7 +13,11 @@ $(document).ready(function() {
         var status = grade.status_grade
         var score = grade.score
 
-        $('.table-grades > tbody').append( "<tr><td>" + exam_name + "</td><td>" + score + "</td><td>" + status + "</td></tr>" );
+        if (grade.status == 3) {
+          $('.table-grades > tbody').append( "<tr><td>" + exam_name + "</td><td>NA</td><td><button class='btn btn-xs btn-warning' onClick='checkExam();'>process</button></td></tr>" );
+        } else {
+          $('.table-grades > tbody').append( "<tr><td>" + exam_name + "</td><td>" + score + "</td><td>" + status + "</td></tr>" );
+        }
     });
   });
 
