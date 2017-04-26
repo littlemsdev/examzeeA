@@ -1,5 +1,8 @@
 $( document ).ready(function() {
   console.log( "ready!" );
+  $.support.cors = true;
+  jQuery.support.cors = true;
+  
   $("#menu-toggle").click(function(e) {
     e.preventDefault();
     $("#wrapper").toggleClass("toggled");

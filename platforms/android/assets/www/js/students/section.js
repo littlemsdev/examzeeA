@@ -13,6 +13,7 @@ $(document).ready(function() {
         var middle_initial = student.middle_initial;
         var last_name = student.last_name;
         var full_name = student.full_name;
+
         $('.table-students > tbody').append( "<tr><td>" + student_number + "</td><td>" + first_name + "</td><td>" + middle_initial + "</td><td>" + last_name + "</td><td><a href='../students/student.html?id=" + student_number + "&full_name=" + full_name +"' class='btn btn-default btn-xs'>view</a></td></tr>" );
     });
   });

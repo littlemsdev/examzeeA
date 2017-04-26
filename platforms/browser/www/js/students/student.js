@@ -33,7 +33,7 @@ function checkExam(elem){
     cache: false,
     success: function() {
       alert("Successfully Checked!");
-      window.location.href = "../students/student.html?id=" + student_number + "&full_name=" + name + "";
+      window.location.href = "../admin/dashboard.html";
     }
   });
 };

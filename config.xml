@@ -9,9 +9,13 @@
     </author>
     <content src="index.html" />
     <icon src="icon.png" />
-    <!-- <access origin="*" /> -->
+    <access origin="*" />
+
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-navigation href="data:*" />
+
 
     <preference name="phonegap-version" value="cli-6.1.0" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
-    <access origin="https://examzee-api.herokuapp.com/api/v1/sessions" />
 </widget>
