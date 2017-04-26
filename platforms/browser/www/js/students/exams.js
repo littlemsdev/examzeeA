@@ -4,28 +4,30 @@ $(document).ready(function() {
     focus: true
   });
 
+  var select = document.getElementById("status");
+
   $("#publish").on('click', function(event){
     event.preventDefault();
     var exam_name = $('input[name="examName"]').val();
+    var subject = $('input[name="subject"]').val();
     var total_item = $('input[name="totalItem"]').val();
     var htmltxt = $('textarea[name="content"]').val($('#summernote').summernote('code'));
     var content = htmltxt.val();
-    var answer_key = $("#answer_key").val();
-    var dataString = 'content=' + content + '&exam_name=' + exam_name + '&total_item=' + total_item + '&answer_key=' + answer_key;
+    var answer_keys = $("#answer_keys").val();
+
+    var status = select.options[select.selectedIndex].value;;
+
+    var dataString = 'content=' + content + '&exam_name=' + exam_name + '&subject=' + subject + '&total_item=' + total_item + '&answer_keys=' + answer_keys + '&status=' + status;
 
     $.ajax({
       type: "POST",
-      url: "http://192.168.43.198:8888/examzee/exam.php",
+      url: "https://examzee-api.herokuapp.com/api/v1/exams",
       data: dataString,
       crossDomain: true,
       cache: false,
       success: function(data) {
-        if(data == "success") {
-          alert("Successfully Added!");
-          window.location.href = "exams.html";
-        } else {
-          alert("error");
-        }
+        alert("Successfully added!");
+        window.location.href = "../students/exams.html";
       }
     });
 

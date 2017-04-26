@@ -73,6 +73,7 @@
                     <thead>
                       <tr>
                         <th>Name</th>
+                        <th>Subject</th>
                         <th>Total Items</th>
                         <th></th>
                       </tr>
@@ -87,6 +88,40 @@
 
 
           </div>
+
+
+          <!-- Modal -->
+          <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Sending File via Bluetooth Connection</h4>
+                </div>
+                <div class="modal-body text-center">
+                  <h3>Detecting paired devices...</h3>
+                  <center>
+                    <img src="../img/sending.gif" class="img-responsive">
+                  </center>
+                </div>
+                <br>
+              </div>
+
+            </div>
+          </div>
+
+          <script>
+          window.setTimeout(function () {
+              $("#myModal").modal("hide");
+          }, 9000);
+          </script>
+
+
+
+
+
         </div>
         <!-- End Page Content -->
 

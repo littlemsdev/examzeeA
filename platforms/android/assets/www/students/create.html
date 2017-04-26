@@ -72,6 +72,20 @@
                     <input type="text" class="form-control" name="examName" id="examName">
                   </div>
                   <div class="col-sm-6">
+                    <label for="subject">Subject</label>
+                    <input type="text" class="form-control" name="subject" id="subject">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-sm-6">
+                    <label for="status">Status</label>
+                    <select class="form-control" id="status">
+                      <option value="1">Active</option>
+                      <option value="2">Disabled</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6">
                     <label for="totalItem">Total Item</label>
                     <input type="text" class="form-control" name="totalItem" id="totalItem">
                   </div>
@@ -86,7 +100,7 @@
 
                 <div class="form-group">
                   <div class="col-sm-12">
-                    <textarea class="form-control" name="answer_key" id="answer_key" placeholder="answer1, answer2, answer3..." rows="4"></textarea>
+                    <textarea class="form-control" name="answer_keys" id="answer_keys" placeholder="[answer1, answer2, answer3...] NOTE: duplicate the last answer." rows="4"></textarea>
                   </div>
                 </div>
 
